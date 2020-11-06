@@ -10,7 +10,7 @@
     <licenseUrl>https://scripts.sil.org/OFL</licenseUrl>
     <projectUrl>https://fonts.google.com/specimen/Poppins</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/poppins.png</iconUrl>
-    <projectSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/fonts-poppins</projectSourceUrl>
+    <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/fonts-poppins</packageSourceUrl>
     <description>### About Poppins
 
 Geometric sans serif typefaces have been a popular design tool ever since these actors took to the world’s stage. Poppins is one of the new comers to this long tradition. With support for the Devanagari and Latin writing systems, it is an internationalist take on the genre.
