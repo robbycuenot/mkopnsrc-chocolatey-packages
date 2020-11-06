@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>filebeat-oss</id>
+        <version>0.0.0</version>
+        <title>Filebeat - OSS</title>
+        <authors>opnsrc.dev</authors>
+        <owners>ElasticSearch</owners>
+        <projectUrl>https://www.elastic.co/downloads/beats/filebeat-oss</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/filebeat-oss.png</iconUrl>
+        <projectSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/filebeat-oss</projectSourceUrl>
+        <licenseUrl>https://github.com/elastic/beats/tree/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.9/release-notes-7.9.3.html</releaseNotes>
+        <copyright>Copyright 2020</copyright>
+        <language>en-US</language>
+		<!--<mailingListUrl></mailingListUrl> -->
+        <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
+        <tags>filebeat filebeat-oss beats elastic kibana logbeats open-source</tags>
+		 <description>
+## Filebeat - OSS is open-source based on Apache2.0 License
+
+Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+
+Forget using SSH when you have tens, hundreds, or even thousands of servers, virtual machines, and containers generating logs. Filebeat helps you keep the simple things simple by offering a lightweight way to forward and centralize logs and files.
+
+Filebeat comes with internal modules (Apache, Cisco ASA, Microsoft Azure, NGINX, MySQL, and more) that simplify the collection, parsing, and visualization of common log formats down to a single command. </description>
+        <summary>Filebeat-OSS application is a free based on Apache2.0 license and intended for legacy open-source of logstash and elasticsearch servers. Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. </summary>
+    </metadata>
+	<files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
