@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>filebeat-oss</id>
-        <version>0.0.0</version>
+        <version>7.9.3</version>
         <title>Filebeat - OSS</title>
         <authors>opnsrc.dev</authors>
         <owners>ElasticSearch</owners>
         <projectUrl>https://www.elastic.co/downloads/beats/filebeat-oss</projectUrl>
         <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/filebeat-oss.png</iconUrl>
-        <projectSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/filebeat-oss</projectSourceUrl>
+        <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/filebeat-oss</packageSourceUrl>
         <licenseUrl>https://github.com/elastic/beats/tree/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.9/release-notes-7.9.3.html</releaseNotes>
