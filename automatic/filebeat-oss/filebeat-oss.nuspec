@@ -4,10 +4,10 @@
         <id>filebeat-oss</id>
         <version>7.9.3</version>
         <title>Filebeat - OSS</title>
-        <authors>opnsrc.dev</authors>
-        <owners>ElasticSearch</owners>
+        <authors>ElasticSearch</authors>
+        <owners>opnsrc.dev</owners>
         <projectUrl>https://www.elastic.co/downloads/beats/filebeat-oss</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/filebeat-oss.png</iconUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/elastic-beats.png</iconUrl>
         <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/filebeat-oss</packageSourceUrl>
         <licenseUrl>https://github.com/elastic/beats/tree/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

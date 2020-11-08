@@ -7,7 +7,7 @@
         <authors>ElasticSearch</authors>
         <owners>opnsrc.dev</owners>
         <projectUrl>https://www.elastic.co/downloads/beats/winlogbeat-oss</projectUrl>
-        <iconUrl>https://chocolatey.org/content/packageimages/winlogbeat.7.9.2.png</iconUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/elastic-beats.png</iconUrl>
         <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/winlogbeat-oss</packageSourceUrl>
         <licenseUrl>https://github.com/elastic/beats/blob/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
