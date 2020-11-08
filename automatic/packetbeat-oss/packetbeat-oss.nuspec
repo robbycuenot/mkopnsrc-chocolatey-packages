@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>packetbeat-oss</id>
+        <version>7.9.3</version>
+        <title>Packetbeat - OSS</title>
+        <authors>opnsrc.dev</authors>
+        <owners>ElasticSearch</owners>
+        <projectUrl>https://www.elastic.co/downloads/beats/packetbeat-oss</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/elastic-beats.png</iconUrl>
+        <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/packetbeat-oss</packageSourceUrl>
+        <licenseUrl>https://github.com/elastic/beats/tree/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.9/release-notes-7.9.3.html</releaseNotes>
+        <copyright>Copyright 2020</copyright>
+        <language>en-US</language>
+        <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
+        <tags>packetbeat packetbeat-oss beats elastic kibana logbeats open-source</tags>
+		 <description>
+## Packetbeat - OSS is open-source, based on Apache2.0 License
+
+Packetbeat is a real-time network packet analyzer that you can use with Elasticsearch to provide an application monitoring and performance analytics system. Packetbeat completes the Beats platform by providing visibility between the servers of your network.
+
+Packetbeat works by capturing the network traffic between your application servers, decoding the application layer protocols (HTTP, MySQL, Redis, and so on), correlating the requests with the responses, and recording the interesting fields for each transaction.
+
+Packetbeat can help you easily notice issues with your back-end application, such as bugs or performance problems, and it makes troubleshooting them - and therefore fixing them - much faster.
+        </description>
+        <summary>Packetbeat is a real-time network packet analyzer that you can use with Elasticsearch to provide an application monitoring and performance analytics system. Packetbeat completes the Beats platform by providing visibility between the servers of your network.</summary>
+    </metadata>
+	<files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
