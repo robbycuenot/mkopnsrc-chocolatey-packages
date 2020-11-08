@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>winlogbeat-oss</id>
+        <version>7.9.3</version>
+        <title>Winlogbeat - OSS</title>
+        <authors>ElasticSearch</authors>
+        <owners>opnsrc.dev</owners>
+        <projectUrl>https://www.elastic.co/downloads/beats/winlogbeat-oss</projectUrl>
+        <iconUrl>https://chocolatey.org/content/packageimages/winlogbeat.7.9.2.png</iconUrl>
+        <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/winlogbeat-oss</packageSourceUrl>
+        <licenseUrl>https://github.com/elastic/beats/blob/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.9/release-notes-7.9.3.html</releaseNotes>
+        <copyright>Copyright 2020</copyright>
+        <language>en-US</language>
+        <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
+        <tags>winlogbeat winlogbeat-oss beats elastic kibana logbeats open-source</tags>
+		<description>
+## Winlogbeat - OSS is open-source, based on Apache2.0 License
+
+Keep a pulse on what's happening across your Windows-based infrastructure. Stream Windows event logs to Elasticsearch and Logstash with Winlogbeat. 
+
+Winlogbeat supports Elastic Common Schema (ECS) and is part of the Elastic Stack, meaning it works seamlessly with Logstash, Elasticsearch, and Kibana. Whether you want to apply a bit more transformation muscle to Windows event logs with Logstash, fiddle with some analytics in Elasticsearch, or review data in Kibana on a dashboard or in the SIEM app, Winlogbeat makes it easy.
+        </description>
+        <summary>Winlogbeat-OSS application is a free based on Apache2.0 license and intended for legacy open-source of logstash and elasticsearch servers. Winlogbeat-OSS is Lightweight data shipper for Windows event logs. They can send windows event logs data from hundreds or thousands of machines and systems to Logstash or Elasticsearch.</summary>
+    </metadata>
+	<files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
