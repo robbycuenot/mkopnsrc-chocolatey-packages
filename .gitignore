@@ -5,3 +5,4 @@
 /vars.ps1
 /tests/.vscode/launch.json
 /.vscode/launch.json
+/vars_default.ps1
