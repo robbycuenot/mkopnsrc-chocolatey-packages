@@ -2,16 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>packetbeat-oss</id>
-        <version>7.9.3</version>
+        <version>7.10.0</version>
         <title>Packetbeat - OSS</title>
         <authors>ElasticSearch</authors>
         <owners>opnsrc.dev</owners>
         <projectUrl>https://www.elastic.co/downloads/beats/packetbeat-oss</projectUrl>
         <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/elastic-beats.png</iconUrl>
         <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/packetbeat-oss</packageSourceUrl>
-        <licenseUrl>https://github.com/elastic/beats/tree/7.9/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
+        <licenseUrl>https://github.com/elastic/beats/tree/7.10/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.9/release-notes-7.9.3.html</releaseNotes>
+        <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.10/release-notes.html</releaseNotes>
         <copyright>Copyright 2020</copyright>
         <language>en-US</language>
         <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
