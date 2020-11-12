@@ -13,7 +13,6 @@
   if ( $AppUninstallPath ) {
     return $AppUninstallPath.UninstallString
   }
-
 }
 
 function GetLocale {
