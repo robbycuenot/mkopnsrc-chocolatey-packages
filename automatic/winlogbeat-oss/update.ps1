@@ -5,6 +5,9 @@ $ChecksumType = 'SHA256'
 function global:au_BeforeUpdate {
     $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
     $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $Latest.ChecksumType64
+    
+    #AU function Get-RemoteFiles can download files and save them in the package's tools directory. It does that by using the $Latest.URL32 and/or $Latest.URL64.
+    #Get-RemoteFiles -Purge
 }
 function global:au_GetLatest() {
     $download_page = Invoke-WebRequest $releases -UseBasicParsing
@@ -30,7 +33,12 @@ function global:au_SearchReplace {
         "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
         "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         "(?i)(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-      }
+      };
+
+      "$($Latest.PackageName).nuspec" = @{
+        "(<licenseUrl.*?)(\d+\.\d+)(.*?licenseUrl>)"    = "`${1}$([regex]::match($Latest.Version, "\d+\.\d+").Value)`${3}"
+        "(<releaseNotes.*?)(\d+\.\d+)(.*?releaseNotes>)"    = "`${1}$([regex]::match($Latest.Version, "\d+\.\d+").Value)`${3}"
+      };
     }
 }
 
