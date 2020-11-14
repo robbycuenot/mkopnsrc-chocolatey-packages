@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>heartbeat-oss</id>
+        <version>7.10.0</version>
+        <title>Heartbeat - OSS</title>
+        <authors>ElasticSearch</authors>
+        <owners>opnsrc.dev</owners>
+        <projectUrl>https://www.elastic.co/downloads/beats/heartbeat-oss</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/elastic-beats.png</iconUrl>
+        <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/heartbeat-oss</packageSourceUrl>
+        <licenseUrl>https://github.com/elastic/beats/tree/7.10/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.10/release-notes.html</releaseNotes>
+        <copyright>Copyright 2020</copyright>
+        <language>en-US</language>
+        <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
+        <tags>metricbeat metricbeat-oss beats elastic kibana logbeats open-source</tags>
+		 <description>
+## Heartbeat - OSS is open-source, based on Apache2.0 License
+
+Heartbeat is a lightweight daemon that you install on a remote server to periodically check the status of your services and determine whether they are available. Unlike Metricbeat, which only tells you if your servers are up or down, Heartbeat tells you whether your services are reachable.
+
+Heartbeat currently supports monitors for checking hosts via:
+
+ * ICMP (v4 and v6) Echo Requests. Use the icmp monitor when you simply want to check whether a service is available. This monitor requires root access.
+ * TCP. Use the tcp monitor to connect via TCP. You can optionally configure this monitor to verify the endpoint by sending and/or receiving a custom payload.
+ * HTTP. Use the http monitor to connect via HTTP. You can optionally configure this monitor to verify that the service returns the expected response, such as a specific status code, response header, or content.
+
+The tcp and http monitors both support SSL/TLS and some proxy settings.
+
+ ![heartbeat-system-dashboard](https://www.elastic.co/guide/en/beats/heartbeat/current/images/heartbeat-statistics.png)
+        </description>
+        <summary>Heartbeat is a lightweight daemon that you install on a remote server to periodically check the status of your services and determine whether they are available. Heartbeat tells you whether your services are reachable.</summary>
+    </metadata>
+	<files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
