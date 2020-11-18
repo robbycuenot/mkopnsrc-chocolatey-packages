@@ -8,7 +8,8 @@ param(
 
     [switch]$PSGallery,
     [switch]$Github,
-    [switch]$Chocolatey
+    [switch]$Chocolatey,
+    [switch]$Nexus
 )
 
 $ErrorActionPreference = 'STOP'
@@ -30,6 +31,7 @@ $p = {
     Publish-Github
     Publish-PSGallery
     Publish-Chocolatey
+    Publish-Nexus
 }
 
 function git_tag() {
@@ -90,6 +92,15 @@ function Publish-Chocolatey() {
     'Chocolatey_ApiKey' | test-var
     choco push (Resolve-Path $build_dir/*.$version.nupkg) --api-key $Env:Chocolatey_ApiKey
     if ($LastExitCode) {throw "Chocolatey push failed with exit code: $LastExitCode"}
+}
+
+function Publish-Nexus() {
+    if (!$Nexus) { Write-Host "Nexus Choco publish disabled."; return }
+    Write-Verbose 'Publishing to Nexus Chocolatey'
+
+    'Nexus_ApiKey' | test-var
+    choco push (Resolve-Path $build_dir/*.$version.nupkg) --api-key $Env:Nexus_ApiKey --source=$Env:Nexus_PushUrl
+    if ($LastExitCode) {throw "Nexus push failed with exit code: $LastExitCode"}
 }
 
 function test-var() {
