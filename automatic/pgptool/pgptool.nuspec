@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>pgptool</id>
+        <version>0.0</version>
+        <title>PGPTool</title>
+        <authors>Sergey Karpushin</authors>
+        <owners>opnsrc.dev</owners>
+        <projectUrl>https://pgptool.github.io/</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/pgptool.ico</iconUrl>
+        <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/pgptool</packageSourceUrl>
+        <licenseUrl>https://raw.githubusercontent.com/pgptool/pgptool/master/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>https://github.com/pgptool/pgptool/releases/</releaseNotes>
+        <copyright>Copyright 2020</copyright>
+        <language>en-US</language>
+        <bugTrackerUrl>https://github.com/pgptool/pgptool/issues</bugTrackerUrl>
+        <tags>pgp pgptool openpgp encrypt encryption decrypt decryption java open-source</tags>
+		 <description>
+## PGP Tool is at least 200% more user friendly than others.
+
+## Notes: 
+    Application requires Java Runtime Environment 1.8+
+    In case you're using non-Oracle JRE, you'll have to set JAVA_HOME environment variable to point to JRE location
+
+## Encrypt and Decrypt PGP files without hassle
+
+* Automatically suggests encryption/decryption parameters - no need to enter everything manually
+* Helps to avoid leaving sensitive data in un-encrypted state
+* Compatible with OpenPGP specification
+
+![encryption-window](https://pgptool.github.io/images/encryption_annotated.png)
+
+![description-window](https://pgptool.github.io/images/decryption_annotated.png)
+
+![monitoring-window](https://pgptool.github.io/images/monitoring_annotated.png)
+        </description>
+        <summary>PGP Tool is at least 200% more user friendly than others. Encrypt and Decrypt PGP files without hassle.</summary>
+    </metadata>
+	<files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
