@@ -25,7 +25,7 @@
     Get all automatic packages  in the directory 'c:\packages' that start with 'cpu-z' or 'p' and package which name is 'copyq'.
 #>
 function Get-AUPackages( [string[]] $Name ) {
-    $root = $global:au_root
+    $root = "$global:au_root\automatic"
     if (!$root) { $root = $pwd }
 
     ls $root\*\update.ps1 | % {
