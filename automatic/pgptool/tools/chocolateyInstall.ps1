@@ -8,8 +8,8 @@ $packageArgs = @{
   version         = $env:ChocolateyPackageVersion
 	unzipLocation   = $toolsDir
 	installerType   = 'msi'
-	url             = 'https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-7.10.0-windows-x86.msi'
-	checksum        = '379b79cf88bbe354e12a739aadbee34340dd566f6660d41734ca7fd3c792cc1f'
+	url             = 'https://github.com/pgptool/pgptool/releases/download/0.5.9.2/pgptoolgui-0.5.9.2.msi'
+	checksum        = 'da44f7ff2ad9ff26cdeca97dda6ff36f7b40b0886a3ed26e822dba0cb2e2fb11'
 	checksumType    = 'SHA256'
 	silentArgs      = "/qn /norestart"
 	#Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
