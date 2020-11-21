@@ -7,7 +7,7 @@
         <authors>Sergey Karpushin</authors>
         <owners>opnsrc.dev</owners>
         <projectUrl>https://pgptool.github.io/</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/pgptool.ico</iconUrl>
+        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/pgptool.png</iconUrl>
         <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/pgptool</packageSourceUrl>
         <licenseUrl>https://raw.githubusercontent.com/pgptool/pgptool/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
