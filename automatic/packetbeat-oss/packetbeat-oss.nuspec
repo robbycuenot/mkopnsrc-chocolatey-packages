@@ -17,7 +17,9 @@
         <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
         <tags>packetbeat packetbeat-oss beats elastic kibana logbeats open-source</tags>
 		 <description>
-## Packetbeat - OSS is open-source, based on Apache2.0 License
+### Note: Open Source ELK Stack does not work with agents that are based on Elastic Paid License. The apache 2.0 license (OSS) packages are limited in what it can support with ELK.
+
+## Packetbeat - OSS is open-source, based on Apache2.0 License which is for open source ELK Stack.
 
 Packetbeat is a real-time network packet analyzer that you can use with Elasticsearch to provide an application monitoring and performance analytics system. Packetbeat completes the Beats platform by providing visibility between the servers of your network.
 

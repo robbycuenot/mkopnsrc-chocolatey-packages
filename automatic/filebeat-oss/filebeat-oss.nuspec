@@ -17,7 +17,9 @@
         <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
         <tags>filebeat filebeat-oss beats elastic kibana logbeats open-source</tags>
 		 <description>
-## Filebeat - OSS is open-source, based on Apache2.0 License
+### Note: Open Source ELK Stack does not work with agents that are based on Elastic Paid License. The apache 2.0 license (OSS) packages are limited in what it can support with ELK.
+
+## Filebeat - OSS is open-source, based on Apache2.0 License which is for open source ELK Stack.
 
 Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 

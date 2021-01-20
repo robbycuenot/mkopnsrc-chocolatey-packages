@@ -17,9 +17,11 @@
         <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
         <tags>winlogbeat winlogbeat-oss beats elastic kibana logbeats open-source</tags>
 		<description>
-## Winlogbeat - OSS is open-source, based on Apache2.0 License
+### Note: Open Source ELK Stack does not work with agents that are based on Elastic Paid License. The apache 2.0 license (OSS) packages are limited in what it can support with ELK.
 
-Keep a pulse on what's happening across your Windows-based infrastructure. Stream Windows event logs to Elasticsearch and Logstash with Winlogbeat. 
+## Winlogbeat - OSS is open-source, based on Apache2.0 License which is for open source ELK Stack.
+
+Winlogbeat Keeps a pulse on what's happening across your Windows-based infrastructure. Stream Windows event logs to Elasticsearch and Logstash with Winlogbeat. 
 
 Winlogbeat supports Elastic Common Schema (ECS) and is part of the Elastic Stack, meaning it works seamlessly with Logstash, Elasticsearch, and Kibana. Whether you want to apply a bit more transformation muscle to Windows event logs with Logstash, fiddle with some analytics in Elasticsearch, or review data in Kibana on a dashboard or in the SIEM app, Winlogbeat makes it easy.
         </description>
