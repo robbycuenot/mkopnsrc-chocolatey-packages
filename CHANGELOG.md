@@ -2,7 +2,10 @@
 
 ## NEXT
 
+- Linux support ([#234](https://github.com/majkinetor/au/pull/234))
 - TLS settings updated ([#216](https://github.com/majkinetor/au/pull/233))
+- Plugins:
+  - `Git`: Added `AddNew` parameter to allow adding new packages, created by the AU script ([#239](https://github.com/majkinetor/au/issues/239))
 
 ## 2020.11.21
 
