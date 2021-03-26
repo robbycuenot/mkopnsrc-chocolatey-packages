@@ -7,12 +7,11 @@
         <authors>ElasticSearch</authors>
         <owners>opnsrc.dev</owners>
         <projectUrl>https://www.elastic.co/downloads/beats/heartbeat-oss</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/mkopnsrc/chocolatey-packages/master/icons/elastic-beats.png</iconUrl>
+        <iconUrl>https://rawcdn.githack.com/mkopnsrc/chocolatey-packages/081b33ffc1bb251042f21277ba060fdea727dad7/icons/elastic-beats.png</iconUrl>
         <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/heartbeat-oss</packageSourceUrl>
         <licenseUrl>https://github.com/elastic/beats/tree/7.10/licenses/APACHE-LICENSE-2.0.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <releaseNotes>https://www.elastic.co/guide/en/beats/libbeat/7.10/release-notes.html</releaseNotes>
-        <copyright>Copyright 2020</copyright>
         <language>en-US</language>
         <bugTrackerUrl>https://github.com/elastic/beats/issues</bugTrackerUrl>
         <tags>metricbeat metricbeat-oss beats elastic kibana logbeats open-source</tags>
