@@ -1,14 +1,3 @@
-# Author: Miodrag Milic <miodrag.milic@gmail.com>
-# Last Change: 22-Oct-2016.
-
-<#
-.SYNOPSIS
-    Push latest (or all) created package(s) to the Chocolatey community repository.
-
-.DESCRIPTION
-    The function uses they API key from the file api_key in current or parent directory, environment variable
-    or cached nuget API key.
-#>
 function Push-Package() {
     param(
         [switch] $All
@@ -22,10 +11,12 @@ function Push-Package() {
 
     $push_url =  if ($Env:au_PushUrl) { $Env:au_PushUrl }
                  else { 'https://push.chocolatey.org' }
+                 
     $force_push = if ($Env:au_ForcePush) { '--force' }
                   else { '' }
 
     $packages = Get-ChildItem *.nupkg | Sort-Object -Property CreationTime -Descending
+
     if (!$All) { $packages = $packages | Select-Object -First 1 }
     if (!$packages) { throw 'There is no nupkg file in the directory'}
     if ($api_key) {
@@ -33,6 +24,7 @@ function Push-Package() {
     } else {
         $packages | ForEach-Object { choco push $_.Name --source $push_url $force_push }
     }
+
     $Nexus_PushUrl = if ($Env:Nexus_PushUrl) { $Env:Nexus_PushUrl }
     if (($Nexus_ApiKey) -and ($Nexus_PushUrl)) {
         $packages | ForEach-Object { choco push $_.Name --api-key $Nexus_ApiKey --source $Nexus_PushUrl $force_push}
