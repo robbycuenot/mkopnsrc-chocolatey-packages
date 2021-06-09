@@ -8,11 +8,11 @@ $packageArgs = @{
   version         = $env:ChocolateyPackageVersion
 	unzipLocation   = $toolsDir
 	installerType   = 'msi'
-	url             = 'https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-oss-7.12.1-windows-x86.msi'
-	url64bit        = 'https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-oss-7.12.1-windows-x86_64.msi'
-	checksum        = 'be64a375988e7c7baba8d202fa42265f18acbd540dfd4eefa5c76040ed95f997'
+	url             = 'https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-oss-7.13.1-windows-x86.msi'
+	url64bit        = 'https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-oss-7.13.1-windows-x86_64.msi'
+	checksum        = 'a5f9cf878b143ae042ae417d84357ac41a013ba3f8b0ffbaf142840edbc5839c'
 	checksumType    = 'SHA256'
-	checksum64      = '029c0c49a6ccbfa4124a755b54a2cda7ffb70a2e0246c936ad89562d9b9a2731'
+	checksum64      = '61a25dd3f7a7a4c0b61caf964a3af3f99d46864be309e8ba9101e61c8a0bb858'
 	checksumType64  = 'SHA256'
 	silentArgs      = "/qn /norestart"
 	#Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx

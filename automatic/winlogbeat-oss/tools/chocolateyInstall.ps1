@@ -8,11 +8,11 @@ $packageArgs = @{
   version       = $env:ChocolateyPackageVersion
 	unzipLocation = $toolsDir
 	installerType = 'msi'
-	url           = 'https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-oss-7.12.1-windows-x86.msi'
-	url64bit      = 'https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-oss-7.12.1-windows-x86_64.msi'
-	checksum      = '8d4dd732b25a86df7007739b975be1f4b918e1926623ed8e0160ee83f5081f61'
+	url           = 'https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-oss-7.13.1-windows-x86.msi'
+	url64bit      = 'https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-oss-7.13.1-windows-x86_64.msi'
+	checksum      = '953d6c401e24ffed3a5b89903953b19fd14fe50448ed02a902a377ebae053599'
 	checksumType  = 'SHA256' #default is md5, can also be sha1, sha256 or sha512
-	checksum64    = '22d4935ee95002d81ba699cf1b31da09fb3d0cce26eb21675cd4c52991056fff'
+	checksum64    = 'd1bc22b20a855b048afb477a797760a3ff2fb816f2e58832eff3daf72675c198'
 	checksumType64= 'SHA256' #default is checksumType
 	silentArgs = "/qn /norestart"
 	#Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
