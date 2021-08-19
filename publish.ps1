@@ -57,7 +57,7 @@ function get_release_notes() {
 
 function Publish-Github() {
 
-    [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor 768 -bor [System.Net.SecurityProtocolType]::Tls -bor [System.Net.SecurityProtocolType]::Ssl3
+    #[System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor 768 -bor [System.Net.SecurityProtocolType]::Tls -bor [System.Net.SecurityProtocolType]::Ssl3
 
     if (!$Github) { Write-Host "Github publish disabled."; return }
     Write-Host 'Publishing to Github'
@@ -82,7 +82,7 @@ function Publish-PSGallery() {
         Path        = $module_path
         NuGetApiKey = $Env:NuGet_ApiKey
     }
-    Publish-Module @params
+    Publish-Module @params -Verbose
 }
 
 function Publish-Chocolatey() {

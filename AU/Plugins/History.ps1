@@ -26,7 +26,7 @@ param(
 Write-Host "Saving history to $Path"
 
 $res=[System.Collections.Specialized.OrderedDictionary]@{}
-$log = git --no-pager log -q --grep '^AU: ' --date iso | Out-String
+$log = git --no-pager log -q --grep '^AU: ' --date iso --all | Out-String
 $all_commits = $log | Select-String 'commit(.|\n)+?(?=\ncommit )' -AllMatches
 foreach ($commit in $all_commits.Matches.Value) {
     $commit = $commit -split '\n'
@@ -55,7 +55,7 @@ $res = $res.Keys | Select-Object -First $Lines | ForEach-Object { $r=[System.Col
 $history = @"
 # Update History
 
-Showing maximum $Lines dates.  
+Showing maximum $Lines dates.
 Click on the first letter of the package name to see its report and on the remaining letters to see its git commit.
 
 ---
