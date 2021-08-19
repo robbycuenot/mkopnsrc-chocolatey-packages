@@ -8,11 +8,11 @@ $packageArgs = @{
   version         = $env:ChocolateyPackageVersion
 	unzipLocation   = $toolsDir
 	installerType   = 'msi'
-	url             = 'https://www.moderncsv.com/release/ModernCSV-Win32-v1.3.30.msi'
-  url64bit        = 'https://www.moderncsv.com/release/ModernCSV-Win-v1.3.30.msi'
-	checksum        = 'ad2d4944794490b2fbed44d3abf641c567a461c8e0cdcc8bdaa69c0d8ac761a1'
+	url             = 'https://www.moderncsv.com/release/ModernCSV-Win32-v1.3.33.msi'
+  url64bit        = 'https://www.moderncsv.com/release/ModernCSV-Win-v1.3.33.msi'
+	checksum        = '738855c32bcbc1dee46245c82a49168969d7d8025464536f75eff02fb1bdb3fe'
 	checksumType    = 'SHA256'
-  checksum64      = '586db13aaabf124404b2ce134d7acff7bf66a68878b476a8f92a9dce3cd9f1d9'
+  checksum64      = '3f5d4358dff94d74f0168626e565b1c51005434090a26503d83003f739c42de3'
 	checksumType64  = 'SHA256'
 	silentArgs      = "/qn /norestart"
 	#Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
