@@ -14,7 +14,7 @@ $packageArgs = @{
 	checksumType    = 'SHA256'
 	#checksum64      = ''
 	#checksumType64  = 'SHA256'
-	silentArgs      = "/qn /norestart"
+	silentArgs      = '/qn /norestart ADDLOCAL="MeshCommanderConsoleSccmExt"'
 	#Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
   validExitCodes = @(
     0, # success
