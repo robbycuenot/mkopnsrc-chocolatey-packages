@@ -3,8 +3,8 @@ $processName = 'nw'
 $Proc = @("$processName")
 $ProcActive = Get-Process -Name $Proc -ErrorAction SilentlyContinue
 
-## Stop winlogbeat application if it is already running
+## Stop MeshCommander application if it is running during upgrade or uninstall
 if($ProcActive){
 	Write-Warning "Application $processName is currently running, the service will be stopped now."
-	Stop-Service $processName -Force -ErrorAction SilentlyContinue
+	Get-Process -Name $processName | Stop-Process -Force
 }
