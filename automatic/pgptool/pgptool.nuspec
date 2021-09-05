@@ -16,10 +16,10 @@
         <language>en-US</language>
         <bugTrackerUrl>https://github.com/pgptool/pgptool/issues</bugTrackerUrl>
         <tags>pgp pgptool openpgp encrypt encryption decrypt decryption java open-source</tags>
-		 <description>
-## PGP Tool is at least 200% more user friendly than others.
+		 <description><![CDATA[    PGP Tool is at least 200% more user friendly than others
 
-## Notes: 
+## Notes
+
     Application requires Java Runtime Environment 1.8+
     In case you're using non-Oracle JRE, you'll have to set JAVA_HOME environment variable to point to JRE location
 
@@ -34,7 +34,7 @@
 ![description-window](https://pgptool.github.io/images/decryption_annotated.png)
 
 ![monitoring-window](https://pgptool.github.io/images/monitoring_annotated.png)
-        </description>
+]]></description>
         <summary>PGP Tool is at least 200% more user friendly than others. Encrypt and Decrypt PGP files without hassle.</summary>
     </metadata>
 	<files>
