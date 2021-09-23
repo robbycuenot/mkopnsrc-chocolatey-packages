@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>refinitive-workspace</id>
+        <version>0.0.0</version>
+        <title>Refinitive Workspace (Messenger)</title>
+        <authors>Refinitive</authors>
+        <owners>opnsrc.dev</owners>
+        <projectUrl>https://workspace.refinitiv.com/rm</projectUrl>
+        <iconUrl>https://rawcdn.githack.com/mkopnsrc/chocolatey-packages/f935397734fbcc4c99df70af7ec39e3fcf9115db/icons/refinitive.png</iconUrl>
+        <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/refinitive-workspace</packageSourceUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>No release notes provided publicly by Refinitiv</releaseNotes>
+        <language>en-US</language>
+        <tags>refinitive workspace eikon messenger thomsonareuters</tags>
+		<description>
+### Note: This Refinitiv Workspace application is owned and copyright by Refinitive. This chocolatey packages is only created and published here to easily deploy Refinitiv Workspace Application for Windows Workstations.
+
+## Refinitiv Workspace a.k.a (Refinitiv Eikon Messenger)
+
+Refinitiv Workspace is the financial analysis desktop and mobile solution, for access to leading data and content, Reuters news, markets and liquidity pools.
+        </description>
+        <summary>Refinitiv Workspace is the financial analysis desktop and mobile solution, for access to leading data and content, Reuters news, markets and liquidity pools.</summary>
+    </metadata>
+	<files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
