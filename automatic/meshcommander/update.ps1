@@ -14,7 +14,7 @@ function global:au_GetLatest() {
     $url_obj   = $download_page.links | Where-Object href -match '.msi'
     #$url64 = $download_page.links | ? href -match '\windows-x86_64.msi$' | select -First 1 -expand href
     $url = (Invoke-WebRequest $url_obj.href).Links |Select-Object -First 1 -ExpandProperty href
-    $version = (($url_obj.outerHTML) |Select-String \d.\d.\d).Matches.Value
+    $version = (($url_obj.outerHTML) | Select-String '\d+(?:\.\d+)+').Matches.Value
     $ext = $url.Split('.') |Select-Object -Last 1
     $Latest = @{
         InstallerType = $ext
