@@ -7,11 +7,11 @@ $packageArgs = @{
 	softwareName  = 'Refinitive Workspace*'
   version       = $env:ChocolateyPackageVersion
 	unzipLocation = $toolsDir
-	installerType = ''
-	url           = ''
+	installerType = 'exe'
+	url           = 'https://cdn.refinitiv.com/public/packages/Workspace/RefinitivWorkspace-installer_1.15.387.exe'
 	#url64bit      = ''
-	checksum      = ''
-	checksumType  = '' #default is md5, can also be sha1, sha256 or sha512
+	checksum      = '255b401b6bdaddec3bc89889a37bc1fea50b68f28353b9b0f87bb08869284b3f'
+	checksumType  = 'SHA256' #default is md5, can also be sha1, sha256 or sha512
 	#checksum64    = ''
 	#checksumType64= '' #default is checksumType
 	silentArgs    = "--silent --lang=en --machine-autoupdate-no"

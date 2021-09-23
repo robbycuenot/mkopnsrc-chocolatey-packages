@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>refinitive-workspace</id>
-        <version>0.0.0</version>
+        <version>1.15.387</version>
         <title>Refinitive Workspace (Messenger)</title>
         <authors>Refinitive</authors>
         <owners>opnsrc.dev</owners>
