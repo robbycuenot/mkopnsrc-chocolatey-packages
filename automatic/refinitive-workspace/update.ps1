@@ -1,24 +1,25 @@
 Import-Module au
+
 # Selenium Driver directory
-$selenium_driver='.\selenium\'
+$selenium_driver = ".\selenium\"
 
 # Import selenium webdriver dll module
 Import-Module "$($selenium_driver)\WebDriver.dll"
 
 # Create a new ChromeDriver Object instance.
-$ChromeDriver = New-Object OpenQA.Selenium.Chrome.ChromeDriver
+$Driver = New-Object OpenQA.Selenium.Edge.EdgeDriver
 
 # Launch a browser and go to URL
-$ChromeDriver.Navigate().GoToURL('https://workspace.refinitiv.com/rm')
+$Driver.Navigate().GoToUrl('https://workspace.refinitiv.com/rm')
 
-$XPathURL = $ChromeDriver.FindElementByXPath('/html/body/iframe').getAttribute("src")
-$ChromeDriver.Navigate().GoToURL($XPathURL)
+$XPathURL = $Driver.FindElementByXPath('/html/body/iframe').getAttribute("src")
+$Driver.Navigate().GoToURL($XPathURL)
 # Download for Windows Link XPath: //*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]
-$RefinitiveExeLink = $ChromeDriver.FindElementByXPath('//*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]').getAttribute("href")
+$RefinitiveExeLink = $Driver.FindElementByXPath('//*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]').getAttribute("href")
 
 # Cleanup
-$ChromeDriver.Close()
-$ChromeDriver.Quit()
+$Driver.Close()
+$Driver.Quit()
 
 $ChecksumType = 'SHA256'
 function global:au_BeforeUpdate {
@@ -64,5 +65,5 @@ function global:au_SearchReplace {
 }
 
 if ($MyInvocation.InvocationName -ne '.') { 
-  update -ChecksumFor none #-NoCheckChocoVersion
+  update -ChecksumFor none -NoCheckChocoVersion
 }
