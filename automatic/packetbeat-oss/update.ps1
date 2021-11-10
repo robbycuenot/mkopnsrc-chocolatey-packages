@@ -10,10 +10,13 @@ function global:au_BeforeUpdate {
     #Get-RemoteFiles -Purge
 }
 function global:au_GetLatest() {
-    $download_page = Invoke-WebRequest $releases -UseBasicParsing
-    $url     = $download_page.links | ? href -match '\windows-x86.msi$' | select -First 1 -expand href
-    $url64     = $download_page.links | ? href -match '\windows-x86_64.msi$' | select -First 1 -expand href
-    $version = $url -split '-' | select -Last 1 -Skip 2
+    $download_page = Invoke-WebRequest $releases
+    $parsedHtml = ConvertFrom-Html $download_page
+    $version = (($parsedHtml.SelectNodes('//p') | ? { $_.InnerText -match 'Version:'}).InnerText | Select-String '\d+(?:\.\d+)+').Matches.Value
+
+    $url     = "https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-oss-$($version)-windows-x86.msi"
+    $url64   = "https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-oss-$($version)-windows-x86_64.msi"
+
     $Latest = @{
         URL32     = $url
         URL64     = $url64
