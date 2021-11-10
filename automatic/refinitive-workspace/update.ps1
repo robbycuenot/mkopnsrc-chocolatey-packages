@@ -6,8 +6,12 @@ $selenium_driver = ".\selenium\"
 # Import selenium webdriver dll module
 Import-Module "$($selenium_driver)\WebDriver.dll"
 
+$DriverOptions = New-Object OpenQA.Selenium.Edge.EdgeOptions
+$DriverOptions.DebuggerAddress='localhost:9222'
+$DriverOptions.UseChromium=$true
+
 # Create a new ChromeDriver Object instance.
-$Driver = New-Object OpenQA.Selenium.Edge.EdgeDriver
+$Driver = New-Object OpenQA.Selenium.Edge.EdgeDriver($DriverOptions)
 
 # Launch a browser and go to URL
 $Driver.Navigate().GoToUrl('https://workspace.refinitiv.com/rm')
