@@ -7,19 +7,20 @@ $selenium_driver = ".\selenium\"
 Import-Module "$($selenium_driver)\WebDriver.dll"
 
 $DriverOptions = New-Object OpenQA.Selenium.Edge.EdgeOptions
-$DriverOptions.DebuggerAddress='localhost:9222'
-$DriverOptions.UseChromium=$true
+#$DriverOptions.DebuggerAddress='localhost:9222'
+#$DriverOptions.UseChromium=$true
 
 # Create a new ChromeDriver Object instance.
 $Driver = New-Object OpenQA.Selenium.Edge.EdgeDriver($DriverOptions)
+#$Driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($DriverOptions)
 
 # Launch a browser and go to URL
-$Driver.Navigate().GoToUrl('https://workspace.refinitiv.com/rm')
+$Driver.Navigate().GoToUrl('https://workspace.refinitiv.com/Apps/MessengerProductPage/1.0.16/')
 
-$XPathURL = $Driver.FindElementByXPath('/html/body/iframe').getAttribute("src")
-$Driver.Navigate().GoToURL($XPathURL)
+#$XPathURL = $Driver.FindElementByName("html/body/iframe").getAttribute("src")
+#$Driver.Navigate().GoToURL($XPathURL)
 # Download for Windows Link XPath: //*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]
-$RefinitiveExeLink = $Driver.FindElementByXPath('//*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]').getAttribute("href")
+$RefinitiveExeLink = $Driver.FindElement([OpenQA.Selenium.By]::XPath('//*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]')).GetAttribute('href')
 
 # Cleanup
 $Driver.Close()
