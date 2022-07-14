@@ -14,8 +14,8 @@ function global:au_GetLatest() {
     $parsedHtml = ConvertFrom-Html $download_page
     $version = (($parsedHtml.SelectNodes('//p') | ? { $_.InnerText -match 'Version:'}).InnerText | Select-String '\d+(?:\.\d+)+').Matches.Value
 
-    $url     = "https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-oss-$($version)-windows-x86.msi"
-    $url64   = "https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-oss-$($version)-windows-x86_64.msi"
+    $url   = "https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-oss-$($version)-windows-x86_64.msi"
+    $url64 = "https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-oss-$($version)-windows-x86_64.msi"
 
     $Latest = @{
         URL32     = $url

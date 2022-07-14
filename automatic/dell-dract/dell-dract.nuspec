@@ -35,9 +35,6 @@
 ** Dell Remote Access Controller 5 (DRAC5)
         </description>
         <summary>Dell Remote Access Configuration Tool (DRACT) discovers and configures Remote Access Controllers (RACs) for systems on your network from a single console.</summary>
-        <dependencies>
-            <dependency id="dotnetfx" version="4.8.0" />
-        </dependencies>
     </metadata>
 	<files>
     <file src="tools\**" target="tools" />

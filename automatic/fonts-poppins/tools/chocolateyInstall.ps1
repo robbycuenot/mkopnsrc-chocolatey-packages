@@ -7,12 +7,12 @@ $file = Join-Path $toolsDir 'Poppins.zip'
 
 $packageArgs = @{
 	packageName   = $env:ChocolateyPackageName
-  version       = $env:ChocolateyPackageVersion
-  FileFullPath  = $file
+	version       = $env:ChocolateyPackageVersion
+	FileFullPath  = $file
 	Destination   = "$toolsDir\fonts"
 	url           = $url
-	checksum      = 'c0d3ef025721949a994d616007d6c59d3f3294005db959f6d36ffbd678a8121cb5fc44ba38bcf955823b6a0cee12965bc762441fdca7c6eb152f668d9ab45935'
-	checksumType  = 'sha512'
+	checksum      = '2376d3a1dd5c9e54a9ab34882a46f409dd91132977e7ca33711e484566c1125c'
+	checksumType  = 'sha256'
 }
 
 #Download zip file from url
