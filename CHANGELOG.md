@@ -1,5 +1,19 @@
 # AU Project Changelog
 
+## NEXT
+
+- Added `$au_GalleryPackageRootUrl` as a slightly more flexible alternative to `$au_GalleryUrl` ([#250](https://github.com/majkinetor/au/issues/250))
+  - `$au_GalleryUrl` global variable is still maintained for compatibility
+  - Can specify as an environment variable `$env:au_GalleryPackageRootUrl` when working with Update-AUPackages (update_all.ps1) ([#254](https://github.com/majkinetor/au/issues/254))
+  - Can specify as a global variable in update.ps1 to override on per package basis.
+- Plugins:
+  - `History`:
+    - History plugin now ignores merges ([#258](https://github.com/majkinetor/au/issues/258))
+    - `Package_Source_Root_Url` param added to History plugin so links can be configured for non-Github users. (related to [#257](https://github.com/majkinetor/au/issues/257))
+  - `Report`:
+    - `Package_Source_Root_Url` param added to Markdown report type so links can be configured for non-Github users. ([#257](https://github.com/majkinetor/au/issues/257))
+    - `Package_Source_Branch` parameter added to Markdown report type to configure the branch name for the package source if not using master. ([#244](https://github.com/majkinetor/au/issues/244))
+
 ## 2021.7.18
 
 - Fixed bad packaging of previous version
