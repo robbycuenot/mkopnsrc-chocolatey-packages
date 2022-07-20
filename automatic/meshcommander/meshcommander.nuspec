@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>meshcommander</id>
-        <version>0.9.5</version>
+        <version>0.9.6</version>
         <title>MeshCommander</title>
         <authors>Ylian Saint-Hilaire</authors>
         <owners>opnsrc.dev</owners>
