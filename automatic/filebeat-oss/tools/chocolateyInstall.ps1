@@ -8,11 +8,11 @@ $packageArgs = @{
   version         = $env:ChocolateyPackageVersion
 	unzipLocation   = $toolsDir
 	installerType   = 'msi'
-	url             = 'https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-8.3.2-windows-x86_64.msi'
-	url64bit        = 'https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-8.3.2-windows-x86_64.msi'
-	checksum        = '7f2593331bbfad1ff2bacc40d566275b78af9b4334b3070c6d802cb4dfa6f4a4'
+	url             = 'https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-8.6.2-windows-x86_64.msi'
+	url64bit        = 'https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-8.6.2-windows-x86_64.msi'
+	checksum        = '052a42b30962bc9736d8017ab9368974f4f96c96bf80b33d4a1bed88a14ab5b3'
 	checksumType    = 'SHA256'
-	checksum64      = '7f2593331bbfad1ff2bacc40d566275b78af9b4334b3070c6d802cb4dfa6f4a4'
+	checksum64      = '052a42b30962bc9736d8017ab9368974f4f96c96bf80b33d4a1bed88a14ab5b3'
 	checksumType64  = 'SHA256'
 	silentArgs      = "/qn /norestart"
 	#Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
