@@ -10,26 +10,25 @@ function global:au_BeforeUpdate {
     #AU function Get-RemoteFiles can download files and save them in the package's tools directory. It does that by using the $Latest.URL32 and/or $Latest.URL64.
     #Get-RemoteFiles -Purge
 }
-function global:au_GetLatest() {
+function global:au_GetLatest() { 
     $url = $releases
     #$ext = $url.Split('.') |Select-Object -Last 1
     
     $version_page = Invoke-WebRequest $version_url -UseBasicParsing
     $version_list = (($version_page.links | Where-Object href -match '/packages.*\d+(?:\.\d)$').href |Select-String '\d+(?:\.\d+)+').Matches.Value
     if ($version_list.GetType().IsArray) {
-      $version = [version]$version_list[0]
-      $version.Minor += 1
+      $cur_ver = [version]$version_list[0]
+      $new_ver = [version]::new($cur_ver.Major, $cur_ver.Minor + 2)
     } else {
-      $version = [version]$version_list
-      $version.Minor += 1
+      $cur_ver = [version]$version_list
+      $new_ver = [version]::new($cur_ver.Major, $cur_ver.Minor + 2)
     }
-    $version
-
+    
     $Latest = @{
         InstallerType = $ext
         URL32     = $url
         #URL64     = $url64
-        Version   = $version
+        Version   = $new_ver
         ChecksumType32 = $ChecksumType
         #ChecksumType64 = $ChecksumType
     }
