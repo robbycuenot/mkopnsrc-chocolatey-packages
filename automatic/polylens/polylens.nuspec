@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>polylens</id>
+    <version>0.0.0</version>
+    <title>Poly Lens</title>
+    <authors>Plantronics, Inc.</authors>
+    <owners>opnsrc.dev</owners>
+    <licenseUrl>https://www.poly.com/us/en/legal/terms/terms-of-use</licenseUrl>
+    <projectUrl>https://www.poly.com/us/en/products/services/cloud/poly-lens</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chtof/chocolatey-packages/automatic/plantronicshub/plantronicshub.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>## PRODUCTIVITY AND CONTROL
+Poly Lens for Windows, part of the Plantronics software portfolio, is a client application that allows users to control the settings on their Plantronics/Poly devices. Users can customize their ringtone and ring location, configure presence updates, and more. The software enhances the user experience by providing valuable information about the state of their Plantronics devices, such as mute and battery status, easily visible at the bottom of the desktop.
+
+## BENEFITS
+*Some features might not be available due to your device incompatibility*
+- In-app customization for personal device settings
+- Built-in notices for software availability
+- Keep track of your device while mobile with Find MyDevice
+- Included and customizable health and wellness reminders
+- In-app soundscape audio that provides better focus
+- Self-help and support information at your fingertips
+
+
+### Screenshot from Poly.com Site
+ ![polylens-app-dashboard](https://poly.scene7.com/is/image/plantronics/poly-lens-mobile-ui-image-update?$mainprod$)
+</description>
+    <summary>Allows end-users to customize their settings and get visible status of their Plantronics audio device on their desktop.</summary>
+    <releaseNotes />
+    <copyright>© 2023 Plantronics, Inc.</copyright>
+    <tags>plantronics polylens poly control VOYAGER VOYAGER FOCUS BLACKWIRE ENCOREPRO SAVI POLY SYNC</tags>
+    <packageSourceUrl>https://github.com/chtof/chocolatey-packages/tree/master/automatic/polylens</packageSourceUrl>
+    <docsUrl>https://www.poly.com/content/dam/www/products/services/cloud/poly-lens/doc/poly-lens-ds-en.pdf</docsUrl>
+    <bugTrackerUrl>https://www.poly.com/us/en/support/contact</bugTrackerUrl>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.7.2.20180712" />
+      <dependency id="vcredist2013" version="12.0.40660.20180427" />
+    </dependencies>
+  </metadata>
+</package>
