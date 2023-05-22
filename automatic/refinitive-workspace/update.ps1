@@ -1,30 +1,6 @@
 Import-Module au
 
-# Selenium Driver directory
-$selenium_driver = ".\selenium\"
-
-# Import selenium webdriver dll module
-Import-Module "$($selenium_driver)\WebDriver.dll"
-
-$DriverOptions = New-Object OpenQA.Selenium.Edge.EdgeOptions
-#$DriverOptions.DebuggerAddress='localhost:9222'
-#$DriverOptions.UseChromium=$true
-
-# Create a new ChromeDriver Object instance.
-$Driver = New-Object OpenQA.Selenium.Edge.EdgeDriver($DriverOptions)
-#$Driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($DriverOptions)
-
-# Launch a browser and go to URL
-$Driver.Navigate().GoToUrl('https://workspace.refinitiv.com/Apps/MessengerProductPage/1.0.16/')
-
-#$XPathURL = $Driver.FindElementByName("html/body/iframe").getAttribute("src")
-#$Driver.Navigate().GoToURL($XPathURL)
-# Download for Windows Link XPath: //*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]
-$RefinitiveExeLink = $Driver.FindElement([OpenQA.Selenium.By]::XPath('//*[@id="externalContainer"]/div[1]/div[3]/div/div[1]/a[1]')).GetAttribute('href')
-
-# Cleanup
-$Driver.Close()
-$Driver.Quit()
+$URL = 'https://www.refinitiv.com/en/products/refinitiv-workspace/download-workspace'
 
 $ChecksumType = 'SHA256'
 function global:au_BeforeUpdate {
@@ -35,18 +11,20 @@ function global:au_BeforeUpdate {
     #Get-RemoteFiles -Purge
 }
 function global:au_GetLatest() {
-    $url     = $RefinitiveExeLink
-    $version = ($RefinitiveExeLink | Select-String '\d+(?:\.\d+)+').Matches.Value
-    #$releaseNotesUrl = $download_page.links | ? href -match 'release-notes.*.html$' | select -First 1 -expand href
-    $ext = $RefinitiveExeLink.Split('.') |Select-Object -Last 1
+    $download_page = Invoke-WebRequest $URL -UseBasicParsing
+    $parsedHtml = $download_page.links | Where-Object href -match '.exe'
+
+    [String]$Installer_URL = ($parsedHtml.href)|Select-String -Pattern '.exe$'
+    [Version]$version = ($parsedHtml | Select-String '\d+(?:\.\d+)+').Matches.Value
+    $ext = $Installer_URL.Split('.') |Select-Object -Last 1
 
     $Latest = @{
-        InstallerType = $ext
-        URL32     = $url
-        #URL64     = $url64
-        Version   = $version
-        ChecksumType32 = $ChecksumType
-        #ChecksumType64 = $ChecksumType
+      InstallerType = $ext
+      URL32     = $Installer_URL
+      #URL64     = $url64
+      Version   = $version.ToString() 
+      ChecksumType32 = $ChecksumType
+      #ChecksumType64 = $ChecksumType
     }
     return $Latest
 }
