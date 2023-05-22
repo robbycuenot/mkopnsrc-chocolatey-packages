@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>fonts-poppins</id>
-    <version>1.1</version>
+    <version>1.2</version>
     <title>Poppins Fonts</title>
     <authors>Indian Type Foundry, Jonny Pinhorn</authors>
     <owners>opnsrc.dev</owners>
@@ -21,7 +21,7 @@ Many of the Latin glyphs (such as the ampersand) are more constructed and ration
     <language>en-US</language>
     <tags>font fonts poppins googlefonts</tags>
     <dependencies>
-      <dependency id="chocolatey-font-helpers.extension" version="0.0.3.1"/>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.3.1" />
     </dependencies>
   </metadata>
 </package>

@@ -1,8 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = 'https://fonts.google.com/download?family=Poppins'
-
 $file = Join-Path $toolsDir 'Poppins.zip'
 
 $packageArgs = @{
@@ -10,9 +8,9 @@ $packageArgs = @{
 	version       = $env:ChocolateyPackageVersion
 	FileFullPath  = $file
 	Destination   = "$toolsDir\fonts"
-	url           = $url
+	url           = 'https://fonts.google.com/download?family=Poppins'
 	checksum      = '2376d3a1dd5c9e54a9ab34882a46f409dd91132977e7ca33711e484566c1125c'
-	checksumType  = 'sha256'
+	checksumType  = 'SHA256'
 }
 
 #Download zip file from url
