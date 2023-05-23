@@ -387,7 +387,7 @@ function Update-Package {
     $global:Latest = @{PackageName = $package.Name}
 
     if ($PSVersionTable.PSVersion.major -ge 6) {
-        $AvailableTls = [enum]::GetValues('Net.SecurityProtocolType') | Where-Object { $_ -ge 'Tls' } # PowerShell 6+ does not support SSL3, so use TLS minimum
+        $AvailableTls = [enum]::GetValues('Net.SecurityProtocolType') | Where-Object { $_ -ge 'Tls12' } # PowerShell 6+ does not support SSL3, so use TLS minimum
     } else {
         # https://github.com/majkinetor/au/issues/206
         $AvailableTls = [enum]::GetValues('Net.SecurityProtocolType') # This way we do not try to add something that is not supported on every version of Windows like Tls13
