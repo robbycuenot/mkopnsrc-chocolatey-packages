@@ -10,7 +10,7 @@ function Push-Package() {
                 elseif ($Env:Nexus_ApiKey) { $Env:Nexus_ApiKey }
 
     $push_url =  if ($Env:au_PushUrl) { $Env:au_PushUrl } else { 'https://push.chocolatey.org' }
-                 
+                     
     $force_push = if ($Env:au_ForcePush) { '--force' } else { '' }
 
     $packages = Get-ChildItem *.nupkg | Sort-Object -Property CreationTime -Descending
@@ -24,7 +24,9 @@ function Push-Package() {
     }
 
     $Nexus_PushUrl = if ($Env:Nexus_PushUrl) { $Env:Nexus_PushUrl }
-    if (($Nexus_ApiKey) -and ($Nexus_PushUrl)) {
-        $packages | ForEach-Object { choco push $_.FullName --api-key $Nexus_ApiKey --source $Nexus_PushUrl $force_push}
+    if ($Nexus_ApiKey) {
+        $packages | ForEach-Object { choco push $_.Name --api-key $Nexus_ApiKey --source $Nexus_PushUrl $force_push}
+    } else {
+        $packages | ForEach-Object { choco push $_.Name --source $Nexus_PushUrl $force_push }
     }
 }
