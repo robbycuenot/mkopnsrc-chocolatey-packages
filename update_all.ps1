@@ -1,12 +1,12 @@
 # AU Packages Template: https://github.com/majkinetor/au-packages-template
 
-param([string[]] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot/automatic")
+param([string[]] $Name, [string] $ForcedPackages, [switch]$Force, [string] $Root = "$PSScriptRoot/automatic")
 
 if (Test-Path $PSScriptRoot/vars.ps1) { . $PSScriptRoot/vars.ps1 }
 
 $Options = [ordered]@{
     WhatIf        = $au_WhatIf                              #Whatif all packages
-    Force         = $false                                  #Force all packages
+    Force         = $Force ? $true : $false              #Force all packages
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
