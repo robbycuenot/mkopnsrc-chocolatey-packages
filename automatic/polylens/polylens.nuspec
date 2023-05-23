@@ -30,7 +30,7 @@ Poly Lens for Windows, part of the Plantronics software portfolio, is a client a
     <releaseNotes />
     <copyright>© 2023 Plantronics, Inc.</copyright>
     <tags>plantronics polylens poly control VOYAGER VOYAGER FOCUS BLACKWIRE ENCOREPRO SAVI POLY SYNC</tags>
-    <packageSourceUrl>https://github.com/chtof/chocolatey-packages/tree/master/automatic/polylens</packageSourceUrl>
+    <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/polylens</packageSourceUrl>
     <docsUrl>https://www.poly.com/content/dam/www/products/services/cloud/poly-lens/doc/poly-lens-ds-en.pdf</docsUrl>
     <bugTrackerUrl>https://www.poly.com/us/en/support/contact</bugTrackerUrl>
     <dependencies>
