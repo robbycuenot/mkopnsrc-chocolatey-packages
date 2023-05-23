@@ -24,7 +24,12 @@ $module_name = 'AU'
 if ($PSVersionTable.PSEdition -ne "Core") {
     $module_dst  = "$Env:ProgramFiles\WindowsPowerShell\Modules"
 } else {
-    $module_dst  = "$Env:ProgramFiles\PowerShell\Modules"
+    $PSMajorVersion = $PSVersionTable.PSVersion.Major
+    if ($PSMajorVersion -ge 7) {
+        $module_dst  = "$Env:ProgramFiles\PowerShell\$PSMajorVersion\Modules"
+    } else {
+        $module_dst  = "$Env:ProgramFiles\PowerShell\Modules"
+    }
 }
 
 Remove-Item -Force -Recurse "$module_dst\$module_name" -ErrorAction ignore
