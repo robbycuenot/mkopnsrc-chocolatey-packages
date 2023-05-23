@@ -1,6 +1,8 @@
 # AU Project Changelog
 
-## NEXT
+The AU project is now archived and there will be no new versions.
+
+## 2022.10.24
 
 - Added `$au_GalleryPackageRootUrl` as a slightly more flexible alternative to `$au_GalleryUrl` ([#250](https://github.com/majkinetor/au/issues/250))
   - `$au_GalleryUrl` global variable is still maintained for compatibility
@@ -13,6 +15,7 @@
   - `Report`:
     - `Package_Source_Root_Url` param added to Markdown report type so links can be configured for non-Github users. ([#257](https://github.com/majkinetor/au/issues/257))
     - `Package_Source_Branch` parameter added to Markdown report type to configure the branch name for the package source if not using master. ([#244](https://github.com/majkinetor/au/issues/244))
+  - `PullRequest`: New plugin that creates a GitHub pull request for the updated packages. ([#269](https://github.com/majkinetor/au/pull/269))
 
 ## 2021.7.18
 
