@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>polylens</id>
-    <version>1.1.26</version>
+    <id>poly-lens</id>
+    <version>1.1.26.20230526</version>
     <title>Poly Lens</title>
     <authors>Plantronics, Inc.</authors>
     <owners>opnsrc.dev</owners>
     <licenseUrl>https://www.poly.com/us/en/legal/terms/terms-of-use</licenseUrl>
     <projectUrl>https://www.poly.com/us/en/products/services/cloud/poly-lens</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chtof/chocolatey-packages/automatic/plantronicshub/plantronicshub.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/mkopnsrc/chocolatey-packages@master/icons/polylens.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>## PRODUCTIVITY AND CONTROL
 Poly Lens for Windows, part of the Plantronics software portfolio, is a client application that allows users to control the settings on their Plantronics/Poly devices. Users can customize their ringtone and ring location, configure presence updates, and more. The software enhances the user experience by providing valuable information about the state of their Plantronics devices, such as mute and battery status, easily visible at the bottom of the desktop.
@@ -29,8 +29,8 @@ Poly Lens for Windows, part of the Plantronics software portfolio, is a client a
     <summary>Allows end-users to customize their settings and get visible status of their Plantronics audio device on their desktop.</summary>
     <releaseNotes />
     <copyright>© 2023 Plantronics, Inc.</copyright>
-    <tags>plantronics polylens poly control VOYAGER VOYAGER FOCUS BLACKWIRE ENCOREPRO SAVI POLY SYNC</tags>
-    <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/polylens</packageSourceUrl>
+    <tags>plantronics polylens poly-lens poly control VOYAGER VOYAGER FOCUS BLACKWIRE ENCOREPRO SAVI POLY SYNC</tags>
+    <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/poly-lens</packageSourceUrl>
     <docsUrl>https://www.poly.com/content/dam/www/products/services/cloud/poly-lens/doc/poly-lens-ds-en.pdf</docsUrl>
     <bugTrackerUrl>https://www.poly.com/us/en/support/contact</bugTrackerUrl>
     <dependencies>
@@ -38,4 +38,7 @@ Poly Lens for Windows, part of the Plantronics software portfolio, is a client a
       <dependency id="vcredist2013" version="12.0.40660.20180427" />
     </dependencies>
   </metadata>
+	<files>
+      <file src="tools\**" target="tools" />
+  </files>
 </package>
