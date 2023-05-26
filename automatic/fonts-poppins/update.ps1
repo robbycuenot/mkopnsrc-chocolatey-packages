@@ -18,10 +18,10 @@ function global:au_GetLatest() {
     $version_list = (($version_page.links | Where-Object href -match '/packages.*\d+(?:\.\d)$').href |Select-String '\d+(?:\.\d+)+').Matches.Value
     if ($version_list.GetType().IsArray) {
       $cur_ver = [version]$version_list[0]
-      $new_ver = [version]::new($cur_ver.Major, $cur_ver.Minor + 2)
+      $new_ver = [version]::new($cur_ver.Major, $cur_ver.Minor + 1)
     } else {
       $cur_ver = [version]$version_list
-      $new_ver = [version]::new($cur_ver.Major, $cur_ver.Minor + 2)
+      $new_ver = [version]::new($cur_ver.Major, $cur_ver.Minor + 1)
     }
     
     $Latest = @{
