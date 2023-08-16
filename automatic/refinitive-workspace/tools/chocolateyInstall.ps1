@@ -2,19 +2,22 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 
+$UserTemp = $env:TEMP
+$LogPath =  $UserTemp + "\$env:ChocolateyPackageName"
+if(-not (Test-Path $LogPath)) { New-Item -ItemType Directory -Name $env:ChocolateyPackageName -Path $UserTemp -Force | Out-Null}
+
 $packageArgs = @{
-  packageName    = $env:ChocolateyPackageName
-  softwareName   = 'Refinitive Workspace*'
-  version        = $env:ChocolateyPackageVersion
-  unzipLocation  = $toolsDir
-  installerType  = 'exe'
-  url            = 'https://cdn.refinitiv.com/public/packages/Workspace/RefinitivWorkspace-installer_1.21.410.exe'
+  PackageName    = $env:ChocolateyPackageName
+  SoftwareName   = 'Refinitive Workspace*'
+  Version        = $env:ChocolateyPackageVersion
+  FileType       = 'exe'
+  Url            = 'https://cdn.refinitiv.com/public/packages/Workspace/RefinitivWorkspace-installer_1.22.303.exe'
   #url64bit      = ''
-  checksum       = '9e654fa13f0d977ad278b3a3a21dcd7e997e333446d6b877ad13d982841c2c53'
+  checksum       = '3aa7c31ae3996541e7030a866355bb36d5c223578ab00a8c89cb8df998c4610c'
   checksumType   = 'SHA256' #default is md5, can also be sha1, sha256 or sha512
   #checksum64    = ''
   #checksumType64= '' #default is checksumType
-  silentArgs     = "--silent --forceInstall --lang=en --machine-autoupdate-no"
+  SilentArgs     = "--silent --forceInstall --lang=en --machine-autoupdate-no --shortcut-workspace=TRUE --shortcut-excel=FALSE --installerlogpath='$LogPath'"
   #Exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
   validExitCodes = @(
     0, # success
@@ -33,5 +36,4 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   )
 } else {
 	Install-ChocolateyPackage @packageArgs
-
 }

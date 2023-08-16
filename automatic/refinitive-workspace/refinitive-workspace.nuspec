@@ -2,11 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>refinitive-workspace</id>
-        <version>1.21.410</version>
+        <version>1.22.303</version>
         <title>Refinitive Workspace (Messenger)</title>
         <authors>Refinitive</authors>
         <owners>opnsrc.dev</owners>
-        <projectUrl>https://workspace.refinitiv.com/rm</projectUrl>
+        <projectUrl>https://www.refinitiv.com/en/products/refinitiv-workspace/download-workspace</projectUrl>
         <iconUrl>https://rawcdn.githack.com/mkopnsrc/chocolatey-packages/f935397734fbcc4c99df70af7ec39e3fcf9115db/icons/refinitive.png</iconUrl>
         <packageSourceUrl>https://github.com/mkopnsrc/chocolatey-packages/tree/master/automatic/refinitive-workspace</packageSourceUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
