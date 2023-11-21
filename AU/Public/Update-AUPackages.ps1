@@ -83,6 +83,7 @@ function Update-AUPackages {
     if (!$Options.UpdateTimeout){ $Options.UpdateTimeout = 1200 }
     if (!$Options.Force)        { $Options.Force         = $false }
     if (!$Options.Push)         { $Options.Push          = $false }
+    if (!$Options.PushAll)      { $Options.PushAll       = $false }
     if (!$Options.PluginPath)   { $Options.PluginPath    = '' }
     if (!$Options.NoCheckChocoVersion){ $Options.NoCheckChocoVersion	= $false }
 
@@ -95,6 +96,7 @@ function Update-AUPackages {
     $aup = Get-AUPackages $Name
     Write-Host 'Updating' $aup.Length  'automatic packages at' $($startTime.ToString("s") -replace 'T',' ') $(if ($Options.Force) { "(forced)" } else {})
     Write-Host 'Push is' $( if ($Options.Push) { 'enabled' } else { 'disabled' } )
+    Write-Host 'PushAll is' $( if ($Options.PushAll) { 'enabled' } else { 'disabled' } )
     Write-Host 'NoCheckChocoVersion is' $( if ($Options.NoCheckChocoVersion) { 'enabled' } else { 'disabled' } )
     if ($Options.Force) { Write-Host 'FORCE IS ENABLED. All packages will be updated' }
 
