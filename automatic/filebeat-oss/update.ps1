@@ -11,8 +11,8 @@ function global:au_BeforeUpdate {
 }
 function global:au_GetLatest() {
     $download_page = Invoke-WebRequest $releases
-    $parsedHtml = ConvertFrom-Html $download_page
-    $version = (($parsedHtml.SelectNodes('//p') | ? { $_.InnerText -match 'Version:'}).InnerText | Select-String '\d+(?:\.\d+)+').Matches.Value
+    $parsedHtml = ConvertFrom-Html -Content $download_page.RawContent
+    $version = (($parsedHtml.SelectNodes('//p') | Where-Object { $_.InnerText -match 'Version:'}).InnerText | Select-String '\d+(?:\.\d+)+').Matches.Value
 
     $url     = "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-$($version)-windows-x86_64.msi"
     $url64   = "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-$($version)-windows-x86_64.msi"

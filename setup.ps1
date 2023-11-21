@@ -4,9 +4,9 @@ $s = {
     chocolatey
     psgallery
     git_4windows
-
+    psparsehtml
     pester
-    cinst papercut
+    #cinst papercut
 }
 
 function git_4windows() {
@@ -32,8 +32,12 @@ function chocolatey() {
 function psgallery() {
     "Installing PSGallery"
 
-    Install-PackageProvider -Name NuGet -Force
+    Install-Module -Name NuGet -Force
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 }
 
+function psparsehtml() {
+    "Installing PSParseHTML"
+    Install-Module -Name PSParseHTML -Force
+}
 & $s
