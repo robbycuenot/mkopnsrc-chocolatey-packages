@@ -25,7 +25,7 @@
     Get all automatic packages  in the directory 'c:\packages' that start with 'cpu-z' or 'p' and package which name is 'copyq'.
 #>
 function Get-AUPackages( [string[]] $Name ) {
-    $root = "$global:au_root\automatic"
+    $root = "$global:au_root\"
     if (!$root) { $root = $pwd }
 
     Get-ChildItem ([System.IO.Path]::Combine($root, '*', 'update.ps1')) | ForEach-Object {
